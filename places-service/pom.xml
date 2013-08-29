@@ -8,11 +8,11 @@
     </parent>
 
     <groupId>org.mattensoft</groupId>
-    <artifactId>places-ejb</artifactId>
+    <artifactId>places-service</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>ejb</packaging>
 
-    <name>places-ejb</name>
+    <name>places-service</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

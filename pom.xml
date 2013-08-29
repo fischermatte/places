@@ -9,7 +9,7 @@
     <modules>
         <module>places-ear</module>
         <module>places-web</module>
-        <module>places-ejb</module>
+        <module>places-service</module>
     </modules>
 
     <dependencyManagement>
