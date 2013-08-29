@@ -1,9 +1,9 @@
 package org.mattensoft.web;
 
-import javax.faces.view.ViewScoped;
-import javax.inject.Named;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
-@Named
+@ManagedBean
 @ViewScoped
 public class Welcome {
 

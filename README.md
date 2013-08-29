@@ -2,4 +2,4 @@ Places
 ======
 To start the application execute:
 
- - mvn embedded-glassfish:run
+ - mvn embedded-glassfish:deploy embedded-glassfish:run

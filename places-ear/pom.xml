@@ -1,57 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>places</artifactId>
-        <groupId>org.mattensoft</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>places</artifactId>
     <groupId>org.mattensoft</groupId>
-    <artifactId>places-ear</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>ear</packaging>
+  </parent>
 
-    <name>places-ear</name>
+  <groupId>org.mattensoft</groupId>
+  <artifactId>places-ear</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>ear</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
-    </properties>
+  <name>places-ear</name>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-ear-plugin</artifactId>
-                <configuration>
-                    <version>6</version>
-                    <defaultLibBundleDir>lib</defaultLibBundleDir>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.glassfish.embedded</groupId>
-                <artifactId>maven-embedded-glassfish-plugin</artifactId>
-                <configuration>
-                    <app>target/${project.artifactId}-${project.version}</app>
-                    <port>8080</port>
-                    <contextRoot>places</contextRoot>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-        <dependency>
-            <groupId>org.mattensoft</groupId>
-            <artifactId>places-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>ejb</type>
-        </dependency>
-        <dependency>
-            <groupId>org.mattensoft</groupId>
-            <artifactId>places-web</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>war</type>
-        </dependency>
-    </dependencies>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <configuration>
+          <version>6</version>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.glassfish.embedded</groupId>
+        <artifactId>maven-embedded-glassfish-plugin</artifactId>
+        <configuration>
+          <app>target/${project.artifactId}-${project.version}.ear</app>
+          <port>8080</port>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.mattensoft</groupId>
+      <artifactId>places-service</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>org.mattensoft</groupId>
+      <artifactId>places-web</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
 </project>

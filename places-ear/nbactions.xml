@@ -4,7 +4,10 @@
             <actionName>CUSTOM-Run Embedded</actionName>
             <displayName>Run Embedded</displayName>
             <goals>
+                <goal>embedded-glassfish:deploy</goal>
                 <goal>embedded-glassfish:run</goal>
+                
             </goals>
         </action>
+        
     </actions>
