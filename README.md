@@ -2,5 +2,10 @@ Places
 ======
 To start the application execute:
 
- - mvn install embedded-glassfish:deploy embedded-glassfish:run
- - open localhost:8080/places in your browser
+ - mvn jetty:run
+
+Open "localhost:8080" in your browser, et voila...
+
+Note
+----
+If the connection to MongoDB (localhost, Port 27018) can not be established, a MongDB instance will be downloaded to TEMP dir and executed.
